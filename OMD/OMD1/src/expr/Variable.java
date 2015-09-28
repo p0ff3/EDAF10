@@ -2,7 +2,7 @@ package expr;
 
 import java.util.Map;
 import java.util.Set;
-//dafuq
+
 public class Variable extends Expr {
 	private String name;
 
@@ -10,14 +10,12 @@ public class Variable extends Expr {
 		this.name = name;
 	}
 
-	//Oklart om det är så simpelt?sad 
 	@Override
 	protected void collectVariables(Set<Variable> set) {
 		set.add(this);
 	}
-	// Metoden value(Map<Variable, Boolean> map) skall returnera uttryckets v¨arde under f¨oruts¨attning
-	// av att alla ing˚aende variabler finns i map
-	//Vad är "värde"?
+
+	
 	@Override
 	public boolean value(Map<Variable, Boolean> map) {
 		
