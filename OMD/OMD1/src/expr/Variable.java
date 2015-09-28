@@ -18,7 +18,7 @@ public class Variable extends Expr {
 	@Override
 	public boolean value(Map<Variable, Boolean> map) {
 		
-		return false;
+		return map.get(name);
 	}
 
 	@Override
