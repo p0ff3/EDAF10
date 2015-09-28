@@ -3,7 +3,7 @@ package expr;
 import java.util.Map;
 import java.util.Set;
 
-public class Conjunction extends SubExpr {
+public class Conjunction extends TwoVariableExpr {
 	private Variable v1, v2;
 
 	public Conjunction(Variable v1, Variable v2) {

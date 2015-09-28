@@ -3,7 +3,7 @@ package expr;
 import java.util.Map;
 import java.util.Set;
 
-public class Equivalence extends SubExpr {
+public class Equivalence extends TwoVariableExpr {
 	private Variable v1, v2;
 
 	public Equivalence(Variable v1, Variable v2) {
