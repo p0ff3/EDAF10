@@ -19,5 +19,9 @@ public class Negation extends Expr {
 	public boolean value(Map<Variable, Boolean> map) {
 		return !(map.get(v1));
 	}
+	
+	public String toString(){
+		return "SCHWARZENEGGER";
+	}
 
 }
