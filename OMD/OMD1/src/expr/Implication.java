@@ -4,8 +4,8 @@ import java.util.Map;
 
 public class Implication extends TwoVariableExpr {
 
-	public Implication(Variable v1, Variable v2) {
-		super(v1, v2);
+	public Implication(Expr e1, Expr e2) {
+		super(e1, e2);
 	}
 
 	/*
@@ -19,7 +19,7 @@ public class Implication extends TwoVariableExpr {
 
 	@Override
 	public boolean value(Map<Variable, Boolean> map) {
-		if (map.get(v1) && !map.get(v2)) {
+		if (map.get(e1) && !map.get(e2)) {
 			return false;
 		} else {
 			return true;
