@@ -13,7 +13,8 @@ public class TwoVariableExpr extends Expr {
 
 	@Override
 	protected void collectVariables(Set<Variable> set) {
-		
+		set.add(v1);
+		set.add(v2);
 
 	}
 

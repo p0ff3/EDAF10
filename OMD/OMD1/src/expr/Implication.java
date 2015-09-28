@@ -9,12 +9,14 @@ public class Implication extends TwoVariableExpr {
 		super(v1, v2);
 	}
 
+	/*
 	@Override
 	protected void collectVariables(Set<Variable> set) {
 		set.add(v1);
 		set.add(v2);
 
 	}
+	*/
 
 	@Override
 	public boolean value(Map<Variable, Boolean> map) {
