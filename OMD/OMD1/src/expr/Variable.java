@@ -15,7 +15,6 @@ public class Variable extends Expr {
 		set.add(this);
 	}
 
-	
 	@Override
 	public boolean value(Map<Variable, Boolean> map) {
 		
