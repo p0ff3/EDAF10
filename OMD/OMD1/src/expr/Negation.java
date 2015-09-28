@@ -5,7 +5,6 @@ import java.util.Set;
 
 public class Negation extends Expr {
 	private Expr e1;
-	private boolean b;
 	public Negation(Expr e1){
 		this.e1 = e1;
 	}
@@ -17,8 +16,7 @@ public class Negation extends Expr {
 
 	@Override
 	public boolean value(Map<Variable, Boolean> map) {
-		b = !(map.get(e1));
-		return b;
+		return !(map.get(e1));
 	}
 	
 	public String toString(){
