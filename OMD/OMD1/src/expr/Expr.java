@@ -15,9 +15,20 @@ public abstract class Expr {
     }
 
     private boolean testAll(List<Variable> list, Map<Variable, Boolean> map) {
-		return false;
-    // omissions
+        if (list.isEmpty()) {
+            return value(map);
+        } else {
+            Variable variable = list.remove(list.size() - 1);
+            List<Variable> list1 = new ArrayList<Variable>(list);
+            map.put(variable, false);
+            if (!testAll(list, map)) {
+                return false;
+            }
+            map.put(variable, true);
+            return testAll(list1, map);
+        }
     }
+
 
     public abstract boolean value(Map<Variable, Boolean> map);
 
