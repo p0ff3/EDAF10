@@ -5,22 +5,26 @@ import java.util.Set;
 
 public class Implication extends SubExpr {
 	private Variable v1, v2;
-	
-	public Implication(Variable v1, Variable v2){
+
+	public Implication(Variable v1, Variable v2) {
 		this.v1 = v1;
 		this.v2 = v2;
 	}
 
 	@Override
 	protected void collectVariables(Set<Variable> set) {
-		// TODO Auto-generated method stub
+		set.add(v1);
+		set.add(v2);
 
 	}
 
 	@Override
 	public boolean value(Map<Variable, Boolean> map) {
-		// TODO Auto-generated method stub
-		return false;
+		if (map.get(v1) && !map.get(v2)) {
+			return false;
+		} else {
+			return true;
+		}
 	}
 
 }
