@@ -5,7 +5,7 @@ import java.util.Set;
 abstract class TwoVariableExpr extends Expr {
 	protected Expr e1,e2;
 	
-	protected TwoVariableExpr(Expr v1, Expr v2){
+	protected TwoVariableExpr(Expr e1, Expr e2){
 		this.e1 = e1;
 		this.e2 = e2;
 	}
