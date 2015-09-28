@@ -6,7 +6,7 @@ import java.util.Set;
 public class TwoVariableExpr extends Expr {
 	protected Variable v1, v2;
 	
-	public TwoVariableExpr(Variable v1, Variable v2){
+	protected TwoVariableExpr(Variable v1, Variable v2){
 		this.v1 = v1;
 		this.v2 = v2;
 	}
