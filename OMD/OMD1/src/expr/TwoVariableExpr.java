@@ -3,10 +3,11 @@ package expr;
 import java.util.Map;
 import java.util.Set;
 
-abstract class TwoVariableExpr extends Expr {
+abstract class TwoVariableExpr extends Variable {
 	protected Variable v1, v2;
 	
 	protected TwoVariableExpr(Variable v1, Variable v2){
+		super("expression");
 		this.v1 = v1;
 		this.v2 = v2;
 	}
@@ -17,4 +18,5 @@ abstract class TwoVariableExpr extends Expr {
 		set.add(v2);
 
 	}
+
 }

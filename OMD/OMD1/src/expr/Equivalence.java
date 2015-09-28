@@ -8,7 +8,6 @@ public class Equivalence extends TwoVariableExpr {
 	public Equivalence(Variable v1, Variable v2) {
 		super(v1,v2);
 	}
-	
 	/*
 	protected void collectVariables(Set<Variable> set) {
 		set.add(v1);
