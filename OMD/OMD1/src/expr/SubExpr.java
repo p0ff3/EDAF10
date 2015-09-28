@@ -3,7 +3,7 @@ package expr;
 import java.util.Map;
 import java.util.Set;
 
-public class Conjunction extends SubExpr {
+public abstract class SubExpr extends Expr {
 
 	@Override
 	protected void collectVariables(Set<Variable> set) {

@@ -3,7 +3,7 @@ package expr;
 import java.util.Map;
 import java.util.Set;
 
-public class Variable extends Expr {
+public class Variable extends SubExpr {
 	private String name;
 
 	public Variable(String name) {
