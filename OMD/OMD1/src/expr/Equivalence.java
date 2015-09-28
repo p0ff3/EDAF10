@@ -4,8 +4,8 @@ import java.util.Map;
 
 public class Equivalence extends TwoVariableExpr {
 
-	public Equivalence(Variable v1, Variable v2) {
-		super(v1,v2);
+	public Equivalence(Expr e1, Expr e2) {
+		super(e1,e1);
 	}
 	
 	/*
@@ -18,7 +18,7 @@ public class Equivalence extends TwoVariableExpr {
 
 	@Override
 	public boolean value(Map<Variable, Boolean> map) {
-		if(map.get(v1) == map.get(v2)){
+		if(map.get(e1) == map.get(e2)){
 			return true;
 		} else{
 			return false;
