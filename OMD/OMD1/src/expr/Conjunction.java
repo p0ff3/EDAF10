@@ -4,8 +4,8 @@ import java.util.Map;
 
 public class Conjunction extends TwoVariableExpr {
 
-	public Conjunction(Variable v1, Variable v2) {
-		super(v1,v2);
+	public Conjunction(Expr e1, Expr e2) {
+		super(e1,e2);
 	}
 
 	/*@Override
@@ -18,7 +18,7 @@ public class Conjunction extends TwoVariableExpr {
 
 	@Override
 	public boolean value(Map<Variable, Boolean> map) {
-		if (map.get(v1) || map.get(v2)) {
+		if (map.get(e1) || map.get(e1)) {
 			return true;
 		} else {
 			return false;
