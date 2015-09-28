@@ -10,7 +10,7 @@ public class Variable extends Expr {
 		this.name = name;
 	}
 
-	//Oklart om det är så simpelt?
+	//Oklart om det är så simpelt?sad 
 	@Override
 	protected void collectVariables(Set<Variable> set) {
 		set.add(this);
