@@ -4,17 +4,20 @@ import java.util.Map;
 import java.util.Set;
 
 public class Negation extends SubExpr {
+		private Variable v1;
+	public Negation(Variable v1){
+		this.v1 = v1;
+	}
 
 	@Override
 	protected void collectVariables(Set<Variable> set) {
-		// TODO Auto-generated method stub
+		set.add(v1);
 
 	}
 
 	@Override
 	public boolean value(Map<Variable, Boolean> map) {
-		// TODO Auto-generated method stub
-		return false;
+		return !(map.get(v1));
 	}
 
 }
