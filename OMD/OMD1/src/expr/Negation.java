@@ -11,12 +11,12 @@ public class Negation extends Expr {
 
 	@Override
 	protected void collectVariables(Set<Variable> set) {
-		set.add(new Variable (toString()));
+		e1.collectVariables(set);
 	}
 
 	@Override
 	public boolean value(Map<Variable, Boolean> map) {
-		return !(map.get(e1));
+		return !e1.value(map);
 	}
 	
 	public String toString(){

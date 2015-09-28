@@ -17,8 +17,7 @@ public class Variable extends Expr {
 
 	@Override
 	public boolean value(Map<Variable, Boolean> map) {
-		
-		return map.get(name);
+		return map.get(this);
 	}
 
 	@Override
@@ -33,6 +32,10 @@ public class Variable extends Expr {
 		} else {
 			return false;
 		}
+	}
+	
+	public String toString(){
+		return name;
 	}
 	
 

@@ -8,18 +8,9 @@ public class Implication extends TwoVariableExpr {
 		super(e1, e2);
 	}
 
-	/*
-	@Override
-	protected void collectVariables(Set<Variable> set) {
-		set.add(v1);
-		set.add(v2);
-
-	}
-	*/
-
 	@Override
 	public boolean value(Map<Variable, Boolean> map) {
-		if (map.get(e1) && !map.get(e2)) {
+		if (e1.value(map) && !e2.value(map)) {
 			return false;
 		} else {
 			return true;

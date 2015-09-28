@@ -15,9 +15,11 @@ public class Main {
 		Expr e1 = new Negation(v1);
 		Expr e2 = new Disjunction(v1,v1);
 		Expr e3 = new Conjunction(e2,e1);
-		Expr e4 = new Implication(e3, v2);
+		Expr e4 = new Implication(e3,	v2);
 		
 		System.out.println(e4.value(vars));
+		System.out.println(e4.isTautology());
+		System.out.println(e4.toString());
 
 	}
 
