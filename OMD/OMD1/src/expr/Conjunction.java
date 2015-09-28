@@ -24,7 +24,10 @@ public class Conjunction extends TwoVariableExpr {
 		} else {
 			return false;
 		}
-
+	}
+	
+	public String op(){
+		return "OR";
 	}
 
 }

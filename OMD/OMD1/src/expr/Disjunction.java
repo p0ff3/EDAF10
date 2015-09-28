@@ -28,5 +28,9 @@ public class Disjunction extends TwoVariableExpr {
 			return false;
 		}
 	}
+	
+	public String op(){
+		return "XOR";
+	}
 
 }

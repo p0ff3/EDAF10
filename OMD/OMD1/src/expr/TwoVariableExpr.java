@@ -15,6 +15,11 @@ abstract class TwoVariableExpr extends Expr {
 	protected void collectVariables(Set<Variable> set) {
 		set.add(v1);
 		set.add(v2);
-
 	}
+	
+	public String toString(){
+		return op();
+	}
+	
+	public abstract String op();
 }

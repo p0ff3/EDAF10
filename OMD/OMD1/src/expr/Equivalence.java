@@ -25,5 +25,9 @@ public class Equivalence extends TwoVariableExpr {
 			return false;
 		}
 	}
+	
+	public String op(){
+		return "EQ";
+	}
 
 }

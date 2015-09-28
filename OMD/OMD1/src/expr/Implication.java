@@ -26,5 +26,9 @@ public class Implication extends TwoVariableExpr {
 			return true;
 		}
 	}
+	
+	public String op(){
+		return "TYRION LANNISTER";
+	}
 
 }
