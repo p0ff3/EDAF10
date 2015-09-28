@@ -17,7 +17,7 @@ abstract class TwoVariableExpr extends Expr {
 	}
 	
 	public String toString(){
-		return op();
+		return v1.toString() + " " + op()+ " " +v2.toString() + " ";
 	}
 	
 	public abstract String op();
