@@ -1,7 +1,5 @@
 package expr;
 
-import java.util.Map;
-
 public class Implication extends TwoVariableExpr {
 
 	public Implication(Expr e1, Expr e2) {
@@ -9,12 +7,8 @@ public class Implication extends TwoVariableExpr {
 	}
 
 	@Override
-	public boolean value(Map<Variable, Boolean> map) {
-		if (e1.value(map) && !e2.value(map)) {
-			return false;
-		} else {
-			return true;
-		}
+	public boolean opValue(Boolean b1, Boolean b2) {
+		return !(b1 && !b2);
 	}
 	
 	public String op(){
