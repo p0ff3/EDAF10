@@ -18,7 +18,7 @@ public abstract class TwoVariableExpr extends Expr {
 	}
 	
 	public boolean value(Map<Variable, Boolean> map){
-		return opValue(e1.value(map), e2.equals(map));
+		return opValue(e1.value(map), e2.value(map));
 	}
 	
 	public String toString(){
