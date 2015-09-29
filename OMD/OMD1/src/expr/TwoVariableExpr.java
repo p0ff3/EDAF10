@@ -17,10 +17,12 @@ public abstract class TwoVariableExpr extends Expr {
 		e2.collectVariables(set);
 	}
 	
+	@Override
 	public boolean value(Map<Variable, Boolean> map){
 		return opValue(e1.value(map), e2.value(map));
 	}
 	
+	@Override
 	public String toString(){
 		return "(" + e1.toString() + " " + op()+ " " + e2.toString() + ")";
 	}

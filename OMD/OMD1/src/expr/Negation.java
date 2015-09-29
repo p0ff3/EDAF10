@@ -19,6 +19,7 @@ public class Negation extends Expr {
 		return !e1.value(map);
 	}
 	
+	@Override
 	public String toString(){
 		return "(" + "NOT" + " " + e1.toString() + ")";
 	}

@@ -11,6 +11,7 @@ public class Equivalence extends TwoVariableExpr {
 		return (b1 == b2);
 	}
 	
+	@Override
 	public String op(){
 		return "EQ";
 	}

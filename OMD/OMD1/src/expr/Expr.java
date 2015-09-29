@@ -29,10 +29,8 @@ public abstract class Expr {
         }
     }
 
-
     public abstract boolean value(Map<Variable, Boolean> map);
 
-  
     public Set<Variable> variables() {
         Set<Variable> set = new HashSet<Variable>();
         collectVariables(set);

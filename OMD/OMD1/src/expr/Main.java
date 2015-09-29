@@ -20,7 +20,7 @@ public class Main {
 		Expr e4 = new Implication(e3,v2);
 		*/
 		
-		// Expr e1 = new Negation(v1);
+		// is not a tautology
 		Expr e2 = new Disjunction(v1,v1);
 		Expr e3 = new Conjunction(e2,v1);
 		Expr e4 = new Implication(e3,v2);

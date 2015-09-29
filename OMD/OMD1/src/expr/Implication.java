@@ -11,6 +11,7 @@ public class Implication extends TwoVariableExpr {
 		return !(b1 && !b2);
 	}
 	
+	@Override
 	public String op(){
 		return "IMPLIES";
 	}

@@ -11,6 +11,7 @@ public class Conjunction extends TwoVariableExpr {
 		return b1 && b2;
 	}
 	
+	@Override
 	public String op(){
 		return "AND";
 	}
