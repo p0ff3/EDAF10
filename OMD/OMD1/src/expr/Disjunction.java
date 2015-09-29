@@ -10,7 +10,7 @@ public class Disjunction extends TwoVariableExpr {
 
 	@Override
 	public boolean value(Map<Variable, Boolean> map) {
-		if (e1.value(map) && !e2.value(map) || !e1.value(map) && e2.value(map)) {
+		if (e1.value(map) || !e2.value(map)) {
 			return true;
 		} else {
 			return false;
@@ -18,7 +18,7 @@ public class Disjunction extends TwoVariableExpr {
 	}
 	
 	public String op(){
-		return "XOR";
+		return "OR";
 	}
 
 }
