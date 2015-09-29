@@ -20,7 +20,7 @@ public class Negation extends Expr {
 	}
 	
 	public String toString(){
-		return "(" + "SCHWARZENEGGER" + " " + e1.toString() + ")";
+		return "(" + "NOT" + " " + e1.toString() + ")";
 	}
 
 }
