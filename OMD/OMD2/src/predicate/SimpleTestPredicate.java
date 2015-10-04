@@ -6,6 +6,7 @@ import ForAll;
 import term.SimpleTestTerm;
 import term.TermList;
 import term.Variable;
+import package.expr;
 
 public class SimpleTestPredicate extends SimpleTestTerm {
     private Variable z = new Variable("z"); // z

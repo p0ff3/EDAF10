@@ -1,8 +1,8 @@
 package expr;
 
-public class Implication extends TwoVariableExpr {
+public class Implies extends TwoVariableExpr {
 
-	public Implication(Expr e1, Expr e2) {
+	public Implies(Expr e1, Expr e2) {
 		super(e1, e2);
 	}
 
