@@ -10,3 +10,4 @@ This package contains a skeleton for classes to represent an expression in predi
    SimplePredicateTest that just prints expected and calculated values.
    
    TestPredicate that uses the JUnit framework by extending TestTerm. 
+   rwa
