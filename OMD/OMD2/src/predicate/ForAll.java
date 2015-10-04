@@ -1,15 +1,11 @@
 package predicate;
 
-import java.util.function.Predicate;
+//import java.util.function.Predicate;
 
 import term.Term;
 import term.Variable;
 
 public class ForAll implements Expr {
-
-	public ForAll(Variable x, predicate.Predicate pz) {
-		// TODO Auto-generated constructor stub
-	}
 
 	public ForAll(Variable v0, Predicate predicate) {
 		// TODO Auto-generated constructor stub
