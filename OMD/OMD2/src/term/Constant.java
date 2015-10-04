@@ -16,4 +16,10 @@ public class Constant implements Term {
     public String toString() {
         return value;
     }
+
+	@Override
+	public Term substitute(Variable x, Term term) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

@@ -18,4 +18,10 @@ public class Function implements Term {
     public String toString() {
         return name + list;
     }
+
+	@Override
+	public Term substitute(Variable x, Term term) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

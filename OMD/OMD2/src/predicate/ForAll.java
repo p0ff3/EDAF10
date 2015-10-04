@@ -4,7 +4,7 @@ import java.util.function.Predicate;
 
 import term.Variable;
 
-public class ForAll {
+public class ForAll implements Expr {
 
 	public ForAll(Variable x, Predicate pz) {
 		// TODO Auto-generated constructor stub

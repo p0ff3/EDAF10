@@ -33,4 +33,9 @@ public class TermList extends ArrayList<Term> {
         builder.append(')');
         return builder.toString();
     }
+
+	public Object substitute(Variable x, Variable y) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
