@@ -12,18 +12,18 @@ public class Main {
 		vars.put(v1, true);
 		vars.put(v2, false);
 		
-		/*
+		
 		// is a tautology
 		Expr e1 = new Negation(v1);
 		Expr e2 = new Disjunction(v1,v1);
 		Expr e3 = new Conjunction(e1,e2);
 		Expr e4 = new Implication(e3,v2);
-		*/
+		
 		
 		// is not a tautology
-		Expr e2 = new Disjunction(v1,v1);
-		Expr e3 = new Conjunction(e2,v1);
-		Expr e4 = new Implication(e3,v2);
+		//Expr e2 = new Disjunction(v1,v1);
+		//Expr e3 = new Conjunction(e2,v1);
+		//Expr e4 = new Implication(e3,v2);
 		
 		
 		System.out.println(e4.value(vars));
