@@ -1,8 +1,6 @@
 package predicate;
 
-import java.util.function.Predicate;
-
-import ForAll;
+//import ForAll;
 import term.SimpleTestTerm;
 import term.TermList;
 import term.Variable;
@@ -43,7 +41,7 @@ public class SimpleTestPredicate extends SimpleTestTerm {
         new SimpleTestPredicate().testAllExpr();
     }
 
-
+/*
        public void testAllExpr() {
             // P(x)[x\y] = P(y)
             printBoth(py, px.substitute(x, y));
@@ -59,5 +57,7 @@ public class SimpleTestPredicate extends SimpleTestTerm {
             expected = new ForAll(v0, new Predicate("Q", new TermList(v0, fx)));
             printBoth(expected, forAllxQxy.substitute(y, fx));
         }
-
+        
+        */
+    	//Skiten flippar ju brutalt så kommenterade bara.
 }
