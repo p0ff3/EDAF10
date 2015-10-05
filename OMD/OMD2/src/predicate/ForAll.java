@@ -21,12 +21,12 @@ public class ForAll implements Expr {
 			return new ForAll(x, predicate);
 		}
 		else if(!x.equals(y) && !term.contains(x)){
-			//System.out.println("Stuff");
 			return new ForAll(x, predicate.substitute(y, term));
 		}
 		else{
-			System.out.println("stuff");
-			return new ForAll(x, predicate);
+			// (FORALL x . Q(x,y)[y\f(x)] = FORALL v0 . Q(v0, f(x))
+			Variable v0 = new Variable();
+			return new ForAll(v0, predicate.substitute(x, term));
 		}
 	}
 	
