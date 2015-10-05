@@ -54,4 +54,9 @@ public class Variable implements Term {
 		}
 
 	}
+
+	@Override
+	public boolean contains(Term x) {
+		return equals(x);
+	}
 }

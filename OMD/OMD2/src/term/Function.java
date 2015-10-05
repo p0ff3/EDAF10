@@ -27,4 +27,9 @@ public class Function implements Term {
 			return new Function(name, list.substitute(x, term));
 		}
 	}
+
+	@Override
+	public boolean contains(Term x) {
+		return list.contains(x);
+	}
 }

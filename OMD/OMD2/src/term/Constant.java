@@ -30,4 +30,9 @@ public class Constant implements Term {
 			return new Constant(value);
 		}
 	}
+
+	@Override
+	public boolean contains(Term x) {
+		return false;
+	}
 }

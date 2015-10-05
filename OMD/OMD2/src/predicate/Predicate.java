@@ -22,5 +22,9 @@ public class Predicate implements Expr {
 	public String toString(){
 		return name + list.toString();
 	}
+	
+	public boolean contains(Term t){
+		return list.contains(t);
+	}
 
 }
