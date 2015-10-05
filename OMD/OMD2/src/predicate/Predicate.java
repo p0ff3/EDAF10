@@ -3,6 +3,7 @@ package predicate;
 import term.Term;
 import term.TermList;
 import term.Variable;
+import term.TermList;
 
 public class Predicate implements Expr {
 	private String name;

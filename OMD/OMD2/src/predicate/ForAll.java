@@ -1,8 +1,7 @@
 package predicate;
 
-//import java.util.function.Predicate;
-
 import term.Term;
+import term.TermList;
 import term.Variable;
 
 public class ForAll implements Expr {
@@ -16,7 +15,7 @@ public class ForAll implements Expr {
 
 	@Override
 	public ForAll substitute(Variable y, Term term) {
-		//return new ForAll(v0.substitute(y, term), predicate.substitute(y, term));
+		
 		if(x.equals(y)){
 			return new ForAll(x, predicate);
 		}
@@ -25,9 +24,13 @@ public class ForAll implements Expr {
 		}
 		else{
 			// (FORALL x . Q(x,y)[y\f(x)] = FORALL v0 . Q(v0, f(x))
+			
 			Variable v0 = new Variable();
-			return new ForAll(v0, predicate.substitute(y, term));
+			Predicate p1 = new Predicate(predicate.toString(), new TermList(v0));
+			return new ForAll(v0, predicate.substitute(y, p1));
 		}
+		
+
 	}
 	
 	@Override
