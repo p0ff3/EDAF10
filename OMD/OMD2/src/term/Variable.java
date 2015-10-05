@@ -46,11 +46,11 @@ public class Variable implements Term {
 	}
 	
 	@Override
-	public Variable substitute(Variable x, Term term) {
+	public Term substitute(Variable x, Term term) {
 		if (this.equals(x) && !this.equals(term)) {
-			return new Variable(term.toString());
+			return term;
 		} else {
-			return new Variable(name);
+			return this;
 		}
 
 	}
