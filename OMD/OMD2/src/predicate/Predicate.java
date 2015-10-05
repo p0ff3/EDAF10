@@ -5,15 +5,22 @@ import term.TermList;
 import term.Variable;
 
 public class Predicate implements Expr {
+	private String name;
+	private TermList list;
 
 	public Predicate(String string, TermList termList) {
-		// TODO Auto-generated constructor stub
+		name = string;
+		list = termList;
 	}
 
 	@Override
-	public Expr substitute(Variable variable, Term term) {
-		// TODO Auto-generated method stub
-		return null;
+	public Predicate substitute(Variable variable, Term term) {
+		return new Predicate(name, list.substitute(variable, term));
+	}
+	
+	@Override
+	public String toString(){
+		return name + list.toString();
 	}
 
 }
