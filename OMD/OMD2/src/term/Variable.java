@@ -51,7 +51,7 @@ public class Variable implements Term {
     printBoth(y, y.substitute(x, y)); // y[x\y] = y
 	*/
 	@Override
-	public Term substitute(Variable x, Term term) {
+	public Variable substitute(Variable x, Term term) {
 
 		if (this.equals(x) && !this.equals(term)) {
 			return new Variable(term.toString());
