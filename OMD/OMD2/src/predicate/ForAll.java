@@ -26,7 +26,7 @@ public class ForAll implements Expr {
 		else{
 			// (FORALL x . Q(x,y)[y\f(x)] = FORALL v0 . Q(v0, f(x))
 			Variable v0 = new Variable();
-			return new ForAll(v0, predicate.substitute(x, term));
+			return new ForAll(v0, predicate.substitute(y, term));
 		}
 	}
 	
