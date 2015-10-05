@@ -34,7 +34,7 @@ public class TermList extends ArrayList<Term> {
 		return builder.toString();
 	}
 
-	public Object substitute(Variable x, Term y) {
+	public TermList substitute(Variable x, Term y) {
 		Term[] list = new Term[this.size()];
 		int i = 0;
 		for (Term t : this) {
