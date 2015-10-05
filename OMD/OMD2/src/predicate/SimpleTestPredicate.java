@@ -59,5 +59,5 @@ public class SimpleTestPredicate extends SimpleTestTerm {
         }
         
         */
-    	//Skiten flippar ju brutalt så kommenterade bara.
+    	//Skiten flippar ju brutalt sï¿½ kommenterade bara.
 }
