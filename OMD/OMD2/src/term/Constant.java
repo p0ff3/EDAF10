@@ -19,11 +19,7 @@ public class Constant implements Term {
 
 	@Override
 	public Term substitute(Variable x, Term term) {
-		if (this.equals(x) && !this.equals(term)) {
-			return new Constant(term.toString());
-		} else {
-			return new Constant(value);
-		}
+		return this;
 	}
 
 	@Override

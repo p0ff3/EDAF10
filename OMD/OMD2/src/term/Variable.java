@@ -47,7 +47,7 @@ public class Variable implements Term {
 	
 	@Override
 	public Term substitute(Variable x, Term term) {
-		if (this.equals(x) && !this.equals(term)) {
+		if (this.equals(x)) {
 			return term;
 		} else {
 			return this;

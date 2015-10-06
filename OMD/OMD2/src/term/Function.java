@@ -21,11 +21,8 @@ public class Function implements Term {
 
 	@Override
 	public Term substitute(Variable x, Term term) {  	
-		if (this.equals(x) && !this.equals(term)) {
-			return new Function(name, list);
-		} else {
 			return new Function(name, list.substitute(x, term));
-		}
+		
 	}
 
 	@Override

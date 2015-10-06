@@ -16,9 +16,9 @@ public class ForAll implements Expr {
 	@Override
 	public ForAll substitute(Variable y, Term term) {
 		if(x.equals(y)){
-			return new ForAll(x, expr);
+			return this;
 		}
-		else if(!x.equals(y) && !term.contains(x)){
+		else if(!term.contains(x)){
 			return new ForAll(x, expr.substitute(y, term));
 		}
 		else{
