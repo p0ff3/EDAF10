@@ -17,11 +17,6 @@ public class Constant implements Term {
 		return value;
 	}
 
-	/*
-	 * printBoth(a, a.substitute(x, y)); // a[x\y] = a printBoth(y,
-	 * x.substitute(x, y)); // x[x\y] = y printBoth(a, y.substitute(y, a)); //
-	 * y[y\a] = a printBoth(y, y.substitute(x, y)); // y[x\y] = y
-	 */
 	@Override
 	public Term substitute(Variable x, Term term) {
 		if (this.equals(x) && !this.equals(term)) {

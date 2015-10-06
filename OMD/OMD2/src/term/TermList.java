@@ -34,17 +34,11 @@ public class TermList extends ArrayList<Term> {
 		return builder.toString();
 	}
 
-	public TermList substitute(Variable x, Term y) {
-		Term[] list = new Term[this.size()];
-		int i = 0;
+	public TermList substitute(Variable x, Term term) {
+		TermList subList = new TermList();
 		for (Term t : this) {
-
-			list[i] = t.substitute(x, y);
-			i++;
-
+			subList.add(t.substitute(x, term));
 		}
-
-		// strs.toArray(new String[strs.size()])
-		return new TermList(list);
+		return subList;
 	}
 }
