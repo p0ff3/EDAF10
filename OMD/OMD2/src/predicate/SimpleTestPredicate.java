@@ -41,23 +41,23 @@ public class SimpleTestPredicate extends SimpleTestTerm {
         new SimpleTestPredicate().testAllExpr();
     }
 
-/*
-       public void testAllExpr() {
-            // P(x)[x\y] = P(y)
-            printBoth(py, px.substitute(x, y));
-            // (P(x) -> P(y)[x\y] = P(y) -> P(y)
-            Expr expected = new Implies(py, py);
-            printBoth(expected, pxImpliesPy.substitute(x, y));
-            // (FORALL x . P(x))[x\y] = FORALL x . P(x)
-            printBoth(forAllxPx, forAllxPx.substitute(x, y));
-            // (FORALL x . P(y))[y\z] = FORALL x . P(z)
-            printBoth(forAllxPz, forAllxPy.substitute(y, z));
-            // (FORALL x . Q(x,y)[y\f(x)] = FORALL v0 . Q(v0, f(x))
-            Variable.resetCounter();
-            expected = new ForAll(v0, new Predicate("Q", new TermList(v0, fx)));
-            printBoth(expected, forAllxQxy.substitute(y, fx));
-        }
+//    
+//    // le lol vafan
+//       public void testAllExpr1() {
+//            // P(x)[x\y] = P(y)
+//            printBoth(py, px.substitute(x, y));
+//            // (P(x) -> P(y)[x\y] = P(y) -> P(y)
+//            Expr expected = new Implies(py, py);
+//            printBoth(expected, pxImpliesPy.substitute(x, y));
+//            // (FORALL x . P(x))[x\y] = FORALL x . P(x)
+//            printBoth(forAllxPx, forAllxPx.substitute(x, y));
+//            // (FORALL x . P(y))[y\z] = FORALL x . P(z)
+//            printBoth(forAllxPz, forAllxPy.substitute(y, z));
+//            // (FORALL x . Q(x,y)[y\f(x)] = FORALL v0 . Q(v0, f(x))
+//            Variable.resetCounter();
+//            expected = new ForAll(v0, new Predicate("Q", new TermList(v0, fx)));
+//            printBoth(expected, forAllxQxy.substitute(y, fx));
+//        }
+//        
         
-        */
-    	//Skiten flippar ju brutalt s� kommenterade bara.
 }
