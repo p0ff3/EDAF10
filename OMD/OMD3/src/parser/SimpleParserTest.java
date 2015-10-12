@@ -1,10 +1,6 @@
 package parser;
 
-import expr.And;
-import expr.Implies;
-import expr.Not;
-import expr.Or;
-import expr.Variable;
+import expr.*;
 
 public class SimpleParserTest {
     private Parser parser = new Parser();
