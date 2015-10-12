@@ -23,7 +23,7 @@ public class Parser {
     public Expr build(String input) {
         return build(new StringReader(input));
     }
-
+    //Vad ska hända här?
     private Expr expr() {
         Expr result, primary;
         result = primary();
@@ -43,10 +43,15 @@ public class Parser {
         result = factor();
         // TODO
         return result;
-   }
+   }	
+    //EOF = -1, VARIABLE = -2, IMPLIES = -3;
 
     private Expr factor() {
         switch (token) {
+        case -1: return;
+        case -2: return new Variable(scanner.token());
+        case -3: return new Implies();
+        //case scanner.variable: return;
         //TODO
         default:
             throw new ParserException("Unexpected " + scanner.token());
