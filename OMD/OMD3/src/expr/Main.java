@@ -14,10 +14,10 @@ public class Main {
 		
 		
 		// is a tautology
-		Expr e1 = new Negation(v1);
-		Expr e2 = new Disjunction(v1,v1);
-		Expr e3 = new Conjunction(e1,e2);
-		Expr e4 = new Implication(e3,v2);
+		Expr e1 = new Not(v1);
+		Expr e2 = new Or(v1,v1);
+		Expr e3 = new And(e1,e2);
+		Expr e4 = new Implies(e3,v2);
 		
 		
 		// is not a tautology

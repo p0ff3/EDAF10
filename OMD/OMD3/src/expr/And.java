@@ -1,19 +1,19 @@
 package expr;
 
-public class Disjunction extends TwoVariableExpr {
+public class And extends TwoVariableExpr {
 
-	public Disjunction(Expr e1, Expr e2) {
+	public And(Expr e1, Expr e2) {
 		super(e1,e2);
 	}
 
 	@Override
 	public boolean opValue(Boolean b1, Boolean b2) {
-		return (b1 || b2);
+		return b1 && b2;
 	}
 	
 	@Override
 	public String op(){
-		return "OR";
+		return "AND";
 	}
 
 }
