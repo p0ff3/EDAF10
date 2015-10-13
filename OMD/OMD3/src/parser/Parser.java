@@ -23,26 +23,35 @@ public class Parser {
 		return build(new StringReader(input));
 	}
 
-	// Vad ska hända här?
+	
 	private Expr expr() {
 		Expr result, primary;
 		result = primary();
-		// TODO
+		if(token == Scanner.IMPLIES){
+			token = scanner.nextToken();
+			primary = primary();
+			return new Implies(result, primary);
+			
+		}
 		return result;
 	}
 
 	private Expr primary() {
 		Expr result, term;
 		result = term();
-		// TODO
+		while(token =='|'){
+			token = scanner.nextToken();
+			term = term();
+			result = new Or(result, term);
+		}
 		return result;
 	}
-	//term ::= factor (’&’ factor)*
+	
 	private Expr term() {
 		Expr result, factor;
 		result = factor();
 		
-		if(token == '&'){
+		while(token == '&'){
 			token = scanner.nextToken();
 			factor = factor();
 			result = new And(result, factor);
@@ -67,7 +76,7 @@ public class Parser {
 			if (token == ')') {
 				token = scanner.nextToken();
 			} else {
-				throw new ParserException("Expected ')' in token");
+				throw new ParserException("Expecting \")\", found: EOF");
 			}
 			return e;
 
