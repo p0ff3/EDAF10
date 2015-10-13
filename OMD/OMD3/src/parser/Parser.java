@@ -58,7 +58,7 @@ public class Parser {
 		}
 		return result;
 	}
-	// EOF = -1, VARIABLE = -2, IMPLIES = -3;
+
 
 	private Expr factor() {
 		Expr e;
@@ -80,8 +80,6 @@ public class Parser {
 			}
 			return e;
 
-			// case scanner.variable: return;
-			// TODO
 		default:
 			throw new ParserException("Unexpected " + scanner.token());
 		}
